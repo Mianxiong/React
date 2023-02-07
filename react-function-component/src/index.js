@@ -4,30 +4,40 @@ import "./index.css";
 // import App from './App';
 let div = document.getElementById("root");
 
-let _state
+let _state = [];
+let index = 0;
 const myUseState = (initialValue) => {
+  const currentIndex = index;
   console.log("myUseState run");
-  _state = _state === undefined ? initialValue : _state;
+  _state[currentIndex] =
+    _state[currentIndex] === undefined ? initialValue : _state[currentIndex];
   const setState = (newValue) => {
-    _state = newValue;
+    _state[currentIndex] = newValue;
     render();
   };
-  return [_state, setState];
+  index += 1;
+  return [_state[currentIndex], setState];
 };
 
 const render = () => {
+  index = 0;
   ReactDOM.render(<App />, div);
 };
 
 function App() {
   console.log("App 运行了");
   const [n, setN] = myUseState(0);
+  const [m, setM] = myUseState(0);
   console.log(`n: ${n}`);
   return (
     <div className="App">
       <p>{n}</p>
       <p>
         <button onClick={() => setN(n + 1)}>+1</button>
+      </p>
+      <p>{m}</p>
+      <p>
+        <button onClick={() => setM(m + 1)}>+1</button>
       </p>
     </div>
   );

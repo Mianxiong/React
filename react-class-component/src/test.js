@@ -24,9 +24,18 @@
 //         console.log('fn',fn)
 //         console.log('arguments[0]',arguments[0])
 //         fn();//fn.call(undefined) this是undefined
-//         arguments[0]();// arguments[0].call(arguments) this是arguments,也就是[fn,1]    
+//         arguments[0]();// arguments[0].call(arguments) this是arguments,也就是[fn,1]
 //     }
 // }
 // obj.method(fn,1);//obj.method.call(obj,fn,1) this是obj,arguments是[fn,1]
-let person = { name: 'hmx', sayHi() { return ()=>console.log('this',this)}}  
-console.log((person.sayHi())())
+let person = {
+  name: "hmx",
+  sayHi() {
+    return () => console.log("this", this);
+  },
+};
+console.log(person.sayHi()());
+
+for (let i = 0; i < 6; i++) {
+  setTimeout(() => console.log(i), 1000);
+}

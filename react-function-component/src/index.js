@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import App from './App';
+import App1 from './App';
 let div = document.getElementById("root");
 
 let _state = [];
@@ -43,4 +43,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, div);
+ReactDOM.render(<App1 />, div);

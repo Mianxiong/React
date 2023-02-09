@@ -10,6 +10,8 @@ import moviesReducer from "./reducers/movies_reducer";
 import UseEffectDemo from "./useEffectDemo";
 import UseMemoDemo from './useMemoDemo'
 import UseRefDemo from "./useRefDemo";
+import ForwardRefDemo from "./forwardRefDemo";
+import UseListHooksDemo from "./useListHooksDemo";
 
 const store = {
   user: null,
@@ -57,4 +59,4 @@ function App() {
 }
 
 const div = document.getElementById("root");
-ReactDOM.render(<UseRefDemo />, div);
+ReactDOM.render(<UseListHooksDemo />, div);

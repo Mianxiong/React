@@ -7,6 +7,8 @@ import Movies from "./components/movies";
 import userReducer from "./reducers/user_reducer";
 import booksReducer from "./reducers/books_reducer";
 import moviesReducer from "./reducers/movies_reducer";
+import UseEffectDemo from "./useEffectDemo";
+import UseMemoDemo from './useMemoDemo'
 
 const store = {
   user: null,
@@ -54,4 +56,4 @@ function App() {
 }
 
 const div = document.getElementById("root");
-ReactDOM.render(<App />, div);
+ReactDOM.render(<UseMemoDemo />, div);

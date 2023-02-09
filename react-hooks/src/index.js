@@ -9,6 +9,7 @@ import booksReducer from "./reducers/books_reducer";
 import moviesReducer from "./reducers/movies_reducer";
 import UseEffectDemo from "./useEffectDemo";
 import UseMemoDemo from './useMemoDemo'
+import UseRefDemo from "./useRefDemo";
 
 const store = {
   user: null,
@@ -56,4 +57,4 @@ function App() {
 }
 
 const div = document.getElementById("root");
-ReactDOM.render(<UseMemoDemo />, div);
+ReactDOM.render(<UseRefDemo />, div);
